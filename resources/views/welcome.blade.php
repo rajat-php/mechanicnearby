@@ -80,7 +80,7 @@
     </body>
 </html>
 <script>
-  var countDownDate = new Date("May 1, 2020 15:37:25").getTime();
+  var countDownDate = new Date("September 1, 2020 15:37:25").getTime();
     var now = new Date().getTime();
     var x = setInterval(function() {
         now = now + 1000;
