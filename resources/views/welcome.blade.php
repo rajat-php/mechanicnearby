@@ -61,12 +61,66 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            @-moz-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* IE */
+@-ms-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+.blink-image {
+    -moz-animation: blink normal 2s infinite ease-in-out; /* Firefox */
+    -webkit-animation: blink normal 2s infinite ease-in-out; /* Webkit */
+    -ms-animation: blink normal 2s infinite ease-in-out; /* IE */
+    animation: blink normal 2s infinite ease-in-out; /* Opera and prob css3 final iteration */
+}
         </style>
+        
     </head>
     <body>
+
         <div class="flex-center position-ref full-height">
-
-
+        <img src="{{ asset('storage/logo.png') }}" height="250" width="250" class="blink-image">
             <div class="content">
                 <div class="title m-b-md">
                     COMING SOON
@@ -80,7 +134,7 @@
     </body>
 </html>
 <script>
-  var countDownDate = new Date("May 1, 2020 15:37:25").getTime();
+  var countDownDate = new Date("August 1, 2020 15:37:25").getTime();
     var now = new Date().getTime();
     var x = setInterval(function() {
         now = now + 1000;
@@ -99,7 +153,7 @@
         // If the count down is over, write some text
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
+            document.getElementById("demo").innerHTML = "COMING IN 2 DAYS";
         }
     }, 1000);
 </script>
